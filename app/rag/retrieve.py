@@ -1,11 +1,15 @@
 # app/rag/retrieve.py
 
-from qdrant_client import QdrantClient
+
 from qdrant_client.models import VectorParams, Distance
 from app.config import embedding_model, reranker_model
+import os
+from qdrant_client import QdrantClient
 
-client = QdrantClient(host="localhost", port=6333)
-
+client = QdrantClient(
+    url=os.getenv("QDRANT_URL"),
+    api_key=os.getenv("QDRANT_API_KEY"),
+)
 COLLECTION_NAME = "documents"
 VECTOR_SIZE     = 768
 
