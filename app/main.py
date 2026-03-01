@@ -8,8 +8,16 @@ from app.rag.ingest import ingest_pdf
 from app.rag.retrieve import retrieve
 from app.rag.generate import generate_answer, generate_answer_stream
 from app.schemas import ChatRequest
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI(title="Enterprise RAG System")
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 
 # =========================================================
