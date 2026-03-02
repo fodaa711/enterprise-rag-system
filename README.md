@@ -2,7 +2,7 @@
 
 A production-ready **Retrieval-Augmented Generation (RAG)** system that allows users to upload PDF documents and ask intelligent questions about them — powered by **Groq LLaMA 3.3 70B**, **Qdrant Cloud**, and a modern **React frontend**.
 
-🌐 **Live Demo:** [https://thriving-luck.up.railway.app](https://thriving-luck.up.railway.app)
+🌐 **Live Demo:**(https://frontend-production-13b4.up.railway.app/)
 
 ---
 
